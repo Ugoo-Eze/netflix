@@ -7,9 +7,26 @@ import requests from "../utils/request";
 
 interface Props {
   netflixOriginals: Movie[];
+  trendingNow: Movie[];
+  topRated: Movie[];
+  actionMovies: Movie[];
+  comedyMovies: Movie[];
+  horrorMovies: Movie[];
+  romanceMovies: Movie[];
+  documentaries: Movie[];
 }
 
-const Home = ({ netflixOriginals }: Props) => {
+const Home = ({
+  netflixOriginals,
+  actionMovies,
+  comedyMovies,
+  documentaries,
+  horrorMovies,
+  romanceMovies,
+  topRated,
+  trendingNow,
+}: Props) => {
+  
   return (
     <div
       className="relative h-screen bg-gradient-to-b from-gray-900/10
@@ -22,7 +39,7 @@ const Home = ({ netflixOriginals }: Props) => {
 
       <Header />
       <main>
-        <Banner />
+        <Banner netflixOriginals={netflixOriginals}/>
         <section>
           {/* Rows */}
           {/* Rows */}
