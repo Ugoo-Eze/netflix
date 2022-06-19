@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import Row from "../components/Row";
 import { Movie } from "../typings";
 import requests from "../utils/request";
 
@@ -38,16 +39,13 @@ const Home = ({
       </Head>
 
       <Header />
-      <main>
+      <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
         <Banner netflixOriginals={netflixOriginals}/>
         <section>
-          {/* Rows */}
-          {/* Rows */}
-          {/* Rows */}
-          {/* Rows */}
-          {/* Rows */}
-          {/* Rows */}
-          {/* Rows */}
+         <Row/>
+         <Row/>
+         <Row/>
+         <Row/>
         </section>
       </main>
       {/* Model */}
